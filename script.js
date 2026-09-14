@@ -92,6 +92,14 @@ if (menuButton && navigationLinks) {
     navigationLinks.classList.remove('open');
     menuButton.setAttribute('aria-expanded', 'false');
   }));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigationLinks.classList.contains('open')) {
+      navigationLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.focus();
+    }
+  });
 }
 
 const backToTop = document.querySelector('.back-top');

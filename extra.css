@@ -277,3 +277,450 @@
         margin: 10px 0 0;
     }
 }
+
+/* Mobile-first refinement and accessibility safeguards */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+:focus-visible {
+    outline: 3px solid #c59d3d;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .wrap {
+        width: min(100% - 32px, 640px);
+    }
+
+    .topbar {
+        min-height: 36px;
+    }
+
+    .topbar-inner {
+        min-height: 36px;
+    }
+
+    .top-links {
+        width: 100%;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .top-links a {
+        min-width: 36px;
+        min-height: 36px;
+        justify-content: center;
+    }
+
+    .top-links svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .nav-inner {
+        height: 70px;
+        gap: 10px;
+    }
+
+    .brand {
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+    }
+
+    .brand strong {
+        max-width: 195px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        letter-spacing: 0.35px;
+    }
+
+    .brand small {
+        font-size: 8px;
+    }
+
+    .menu-btn {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #d5e4d6;
+        border-radius: 9px;
+    }
+
+    .menu-btn svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .nav-links {
+        top: 70px;
+        padding: 8px 16px 16px;
+        box-shadow: 0 16px 24px rgba(18, 64, 35, 0.12);
+    }
+
+    .nav-links a {
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 12px 8px;
+        border-bottom: 1px solid #edf2ed;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: 0;
+    }
+
+    .hero,
+    .page-hero {
+        padding: 52px 0 50px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .faq-grid,
+    .contact-card,
+    .contact-page-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: clamp(38px, 11vw, 50px);
+        letter-spacing: -1.2px;
+    }
+
+    .lead {
+        margin: 18px 0 24px;
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 340px;
+    }
+
+    .hero-buttons .btn,
+    .cta .btn,
+    .contact-form .btn {
+        min-height: 48px;
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .trust {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 22px;
+    }
+
+    .hero-visual {
+        height: 365px;
+        margin-top: 8px;
+    }
+
+    .photo-frame {
+        width: min(265px, 76vw);
+        border-radius: 145px 145px 12px 12px;
+    }
+
+    .experience-card {
+        left: 0;
+        bottom: 4px;
+        padding: 12px 14px;
+    }
+
+    .leaf {
+        right: 2%;
+        top: 10px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid div {
+        padding: 22px 8px;
+    }
+
+    .stats-grid b {
+        font-size: 29px;
+    }
+
+    .section {
+        padding: 66px 0;
+    }
+
+    .section-head {
+        margin-bottom: 30px;
+    }
+
+    .section-copy h2,
+    .section-head h2,
+    .center-head h2,
+    .clinic-information h2 {
+        font-size: clamp(32px, 9vw, 42px);
+        letter-spacing: -1px;
+    }
+
+    .center-head {
+        margin-bottom: 32px;
+    }
+
+    .about-art {
+        height: 360px;
+    }
+
+    .arch {
+        width: calc(100% - 26px);
+        height: 322px;
+    }
+
+    .quote-card {
+        right: 0;
+        bottom: 0;
+        max-width: 235px;
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+
+    .service-preview,
+    .testimonial-grid,
+    .all-services,
+    .feature-grid,
+    .philosophy-cards,
+    .why-grid,
+    .why-six {
+        grid-template-columns: 1fr;
+    }
+
+    .service-preview,
+    .testimonial-grid,
+    .all-services,
+    .feature-grid,
+    .philosophy-cards {
+        gap: 14px;
+    }
+
+    .service-card,
+    .feature-grid article,
+    .philosophy-cards article {
+        padding: 24px 20px;
+    }
+
+    .treatment,
+    .detailed-services .treatment {
+        min-height: 0;
+        padding: 26px 22px;
+        border-radius: 14px;
+    }
+
+    .treatment i {
+        width: 31px;
+        height: 31px;
+        margin-bottom: 16px;
+    }
+
+    .treatment h3 {
+        margin: 0 0 10px;
+        font-size: 25px;
+    }
+
+    .treatment p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .treatment a,
+    .treatment > a {
+        min-height: 42px;
+        margin-top: 16px;
+        font-size: 13px;
+    }
+
+    .why-grid {
+        gap: 0;
+    }
+
+    .why-grid article {
+        padding: 20px 0;
+    }
+
+    .why-grid h3 {
+        font-size: 19px;
+    }
+
+    .why-grid p,
+    .feature-grid p {
+        font-size: 12px;
+    }
+
+    .testimonial-grid blockquote {
+        padding: 23px 20px;
+        font-size: 15px;
+    }
+
+    .faq-question {
+        min-height: 58px;
+        padding: 14px 2px;
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        font-size: 13px;
+    }
+
+    .contact-info,
+    .contact-form,
+    .standalone-form {
+        padding: 30px 20px;
+    }
+
+    .contact-details {
+        gap: 18px;
+        margin-top: 24px;
+    }
+
+    .contact-details b {
+        font-size: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        min-height: 42px;
+        padding: 10px 2px;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        min-height: 100px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .map-wrap {
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    .cta {
+        padding: 62px 0;
+    }
+
+    .cta .btn + .btn {
+        margin: 10px 0 0;
+    }
+
+    footer {
+        padding: 52px 0 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: auto;
+    }
+
+    .footer-grid h4 {
+        margin-bottom: 8px;
+    }
+
+    .footer-grid > div:not(:first-child) a {
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .footer-bottom {
+        margin-top: 28px;
+        font-size: 10px;
+    }
+
+    .floating,
+    .back-top {
+        right: 12px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .floating.phone {
+        bottom: max(14px, env(safe-area-inset-bottom));
+    }
+
+    .floating.whatsapp {
+        bottom: max(70px, calc(env(safe-area-inset-bottom) + 56px));
+    }
+
+    .back-top {
+        bottom: max(126px, calc(env(safe-area-inset-bottom) + 112px));
+    }
+}
+
+@media (max-width: 380px) {
+    .wrap {
+        width: calc(100% - 24px);
+    }
+
+    .brand strong {
+        max-width: 160px;
+        font-size: 11px;
+    }
+
+    .brand small {
+        font-size: 7.5px;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 37px;
+    }
+
+    .experience-card {
+        transform: scale(0.9);
+        transform-origin: left bottom;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
